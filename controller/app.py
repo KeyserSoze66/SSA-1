@@ -192,6 +192,8 @@ of the broker'''
 client.tls_set("/app/certs/ca.crt")
 client.tls_insecure_set(True)
 client.connect("mosquitto_container", 8883, 60)  # connect to broker
+print("Setting password...")
+client.username_pw_set(username="nebula",password="Nebula.123")
 print("MQTTS started")
 
 
